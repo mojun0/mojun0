@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.1/d3.min.js"></script>
+    <title>준영이의 라오킹</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+    <body>
+      <a href="main.html">
+          <div class="main-img"> </div>
+        </a>
+<div id="all">
+  <div class="menu">
+    <div>
+      <ul>
+        <a href="TM.html"class="saw" id="active"><li>가속</li></a>
+        <a href="GD.html"class="saw" id="active"><li>황뚝</li></a>
+        <a href="IX.html"class="saw" id="active"><li>경험치</li></a>
+      </ul>
+    </div>
+  </div>   <!--여기다가 배경 애드워드 사진 배경으로 넣기-->
+  <div class="main">
+    <div>
+      <!-- <h1 style="color:gold; font-size: 25px; text-align:center;">가속계산기</h1> -->
+      <table border="1" bordercolor="gold" width="100%" height="150"
+      padding-top="calc(300 / 1300 * 100%);">
+              <caption style="color:gold; font-size: 25px;">
+                <strong>가속계산기</strong>
+              </caption> 
+          <th></th>
+           <td>1분</td>
+           <td>5분</td>
+           <td>10분</td>
+           <td>15분</td>
+           <td>30분</td>
+           <td>60분</td>
+           <td>3시간</td>
+           <td>8시간</td>
+           <td>12시간</td>
+           <td>24시간</td>
+           <td>3일</td>
+           <td>7일</td>
+           <td>30일</td>
+           <tr>
+            <th>갯수</th>
+            <td><input type="text" size="2px" id ="time_1m" oninput="abc()"></td>
+            <td><input type="text" size="2px" id ="time_5m" oninput="abc()"></td>
+            <td><input type="text" size="2px" id ="time_10m" oninput="abc()"></td>
+            <td><input type="text" size="2px" id ="time_15m" oninput="abc()"></td>
+            <td><input type="text" size="2px" id ="time_30m" oninput="abc()"></td>
+            <td><input type="text" size="2px" id ="time_60m" oninput="abc()"></td>
+            <td><input type="text" size="2px" id ="time_3h" oninput="abc()"></td>
+            <td><input type="text" size="2px" id ="time_8h" oninput="abc()"></td>
+            <td><input type="text" size="2px" id ="time_12h" oninput="abc()"></td>
+            <td><input type="text" size="2px" id ="time_24h" oninput="abc()"></td>
+            <td><input type="text" size="2px" id ="time_3d" oninput="abc()"></td>
+            <td><input type="text" size="2px" id ="time_7d" oninput="abc()"></td>
+            <td><input type="text" size="2px" id ="time_30d" oninput="abc()"></td>
+          </tr>
+          <tr>
+            <th>합계</th>
+            <td colspan="13" <div id ="alltime" ></div></td>
+          </tr>
+          </table>
+    </div>
+  </div>
+</div>
+<script>
+  function abc(){ // 쥐님이 주신 정답파일
+    var time1 = parseInt(document.getElementById("time_1m").value); //  첫번째 input값을 불러와서 int(숫자형)으로 변환
+    var time2 = parseInt(document.getElementById("time_5m").value); // 두번째 input값을 불러와서 int(숫자형)으로 변환
+    var time3 = parseInt(document.getElementById("time_10m").value);
+    var x = time1 + time2; // 두값을 합함
+     document.getElementById('alltime').innerHTML = x + "분"; // 출력
+     console.log(x);   // 콘솔
+    }
+</script>
+</body>
+</html>
