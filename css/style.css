@@ -35,7 +35,7 @@
     width: 100%;
     height: 0;
     padding-top: calc(820 / 1920 * 100%);
-    background-image: url('사진/라오킹 메인 사진.jpg');
+    background-image: url('../img/라오킹 메인 사진.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
