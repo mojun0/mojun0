@@ -6,6 +6,9 @@
     <title>준영이의 라오킹</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../Jquery/jquery-3.5.1.js"></script>
+    <script src="../js/timeclu.js"></script>
+    <script src="../js/clickval.js"></script>
+    <!-- <script src="../js/test1.js"></script> -->
   </head>
     <body>
       <a href="main.html">
@@ -45,42 +48,47 @@
            <td>30일</td>
            <tr>
             <th>갯수</th>
-            <td><input type="text" size="2px" id ="time_1m" oninput="abc()" placeholder="갯수"></td>
-            <td><input type="text" size="2px" id ="time_5m" oninput="abc()"></td>
-            <td><input type="text" size="2px" id ="time_10m" oninput="abc()"></td>
-            <td><input type="text" size="2px" id ="time_15m" oninput="abc()"></td>
-            <td><input type="text" size="2px" id ="time_30m" oninput="abc()"></td>
-            <td><input type="text" size="2px" id ="time_60m" oninput="abc()"></td>
-            <td><input type="text" size="2px" id ="time_3h" oninput="abc()"></td>
-            <td><input type="text" size="2px" id ="time_8h" oninput="abc()"></td>
-            <td><input type="text" size="2px" id ="time_12h" oninput="abc()"></td>
-            <td><input type="text" size="2px" id ="time_24h" oninput="abc()"></td>
-            <td><input type="text" size="2px" id ="time_3d" oninput="abc()"></td>
-            <td><input type="text" size="2px" id ="time_7d" oninput="abc()"></td>
-            <td><input type="text" size="2px" id ="time_30d" oninput="abc()"></td>
+            <td><input type="text" size="2px" name="time" id="time_1m" value="0""></td>
+            <td><input type="text" size="2px" name="time" id="time_5m" value="0"></td>
+            <td><input type="text" size="2px" name="time" id="time_10m" value="0"></td>
+            <td><input type="text" size="2px" name="time" id="time_15m" value="0"></td>
+            <td><input type="text" size="2px" name="time" id="time_30m" value="0"></td>
+            <td><input type="text" size="2px" name="time" id="time_60m" value="0"></td>
+            <td><input type="text" size="2px" name="time" id="time_3h" value="0"></td>
+            <td><input type="text" size="2px" name="time" id="time_8h" value="0"></td>
+            <td><input type="text" size="2px" name="time" id="time_12h" value="0"></td>
+            <td><input type="text" size="2px" name="time" id="time_24h" value="0"></td>
+            <td><input type="text" size="2px" name="time" id="time_3d" value="0"></td>
+            <td><input type="text" size="2px" name="time" id="time_7d" value="0"></td>
+            <td><input type="text" size="2px" name="time" id="time_30d" value="0"></td>
           </tr>
           <tr>
             <th>합계</th>
-            <td colspan="13" <div id ="alltime" ></div></td>
+            <div id="buttonposition">
+            <td colspan="13">
+              <button id="cal_btn">계산하기</button>
+              <!-- 버튼 클릭과 동시에 버튼이 사라짐. -->
+              <button id="reset" style="position: fixed; right:50px;">초기화</button>
+            </div>
+              <div id ="alltime">
+                <!-- 계산하기 버튼 누르면 결과값 출력 -->
+              </div>
+            </td>
           </tr>
           </table>
     </div>
   </div>
 </div>
+
 <script>
-  $("")
- 
- 
- 
- 
-  /*function abc(){ // 쥐님이 주신 정답파일
-    var time1 = parseInt(document.getElementById("time_1m").value); //  첫번째 input값을 불러와서 int(숫자형)으로 변환
-    var time2 = parseInt(document.getElementById("time_5m").value); // 두번째 input값을 불러와서 int(숫자형)으로 변환
-    var time3 = parseInt(document.getElementById("time_10m").value);
-    var x = time1 + time2; // 두값을 합함
-     document.getElementById('alltime').innerHTML = x + "분"; // 출력
-     console.log(x);   // 콘솔
-    }*/
-</script>
-</body>
+    // 1. 버튼이 사라지는 스크립트 완.
+    
+    //2. 입력한 값을 받아와서 변수에 저장 완.
+
+    //3. 변수들을 계산 수식 완.
+
+    //4. 계산한 값 출력하기 완.
+    
+    //5. 초기화 버튼 만들기 완.
+  </script>
 </html>
