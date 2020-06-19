@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    console.log('clickval start'); // 스크립트 연결 확인
+    // console.log('clickval start'); // 스크립트 연결 확인
     $("#time_1m").click(function(){
         $("#time_1m").val('');
     }
