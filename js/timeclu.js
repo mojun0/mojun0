@@ -13,6 +13,15 @@ $(document).ready(function(){
           // 2. 아래 코드들과 이기능들을 조금 더 업그레이드 해볼까요?
           // 2-1. 위에서 저장한 inValue값은 어디에서 사용되는걸까요?? inValue값을 사용해서 출력해보기!! - for문 사용 = 아래 코드들을 줄일 수 있어요!
           // 2-2. 계산하기 버튼을 클릭하면 버튼이 사라지죠?? 조금더 업그레이드 해볼까요? 계산한 후 값을 "변경"하면 계산하기 버튼이 다시 나타나도록 해보기!
+          var tP = $("inValue[i]").var;
+        };
+      });      
+        
+        
+        
+        
+        
+        
         //   function inValue(){ 
         //     // 1분 인풋
         //     var tP = $("#time_1m").val();
@@ -79,6 +88,7 @@ $(document).ready(function(){
         //     var day12 = Math.floor((tP12 * 43200) / 1440);
         //     var hours12 = Math.floor(((tP12 * 43200) - (day12 * 1440)) / 60);
         //     var minutes12 = tP12 * 43200 - (day12 * 1440) - (hours12 * 60);
+        //     
         //     document.getElementById('alltime').innerHTML = 
         //     parseInt(day+day1+day2+day3+day4+day5+day6+day7+day8+day9+day10+day11+day12)
         //     +'일'+ 
@@ -88,6 +98,4 @@ $(document).ready(function(){
         //     +'분';
         //   }
         //   inValue();
-        // }
-  });
-});
+        //

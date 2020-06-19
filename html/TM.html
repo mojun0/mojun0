@@ -6,7 +6,7 @@
     <title>준영이의 라오킹</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../Jquery/jquery-3.5.1.js"></script>
-    <script src="../js/timeclu.js"></script>
+    <!-- <script src="../js/timeclu.js"></script> -->
     <script src="../js/clickval.js"></script>
   </head>
   <body>
@@ -64,7 +64,7 @@
             <tr>
               <th>합계</th>
               <div id="buttonposition">
-                <td colspan="13">
+                <td colspan="13" id="totar">
                   <button id="cal_btn">계산하기</button>
                   <!-- 2. 초기화 버튼이 안나타나는것 같죠?? -->
                   <button id="reset" style="position: fixed; right:50px;">초기화</button>
@@ -75,5 +75,59 @@
         </div>
       </div>
     </div>
+    <script>
+      $(document).ready(function(){
+        console.log('Calculation start'); // 스크립트 연결 확인
+        $("#cal_btn").click(function(){
+          $("#cal_btn").hide();
+            var inputValue = $("input[name=time]").length;
+            var inValue = new Array(inputValue)
+             for(var i=0; i< inputValue; i++){
+              inValue[i] = $("input[name=time]").eq(i).val()
+              console.log(inValue);
+             }
+             tt();
+      })
+            function tt(){
+              var m = inValue[0]; // 이값을 도저히 인벨류값을 못뺴오겠어요 .. 
+              console.log(m)
+              var day = Math.floor(m / 1440);
+              var hours = Math.floor((m - (day * 1440)) / 60);
+              var minutes = (m - (day * 1440) - (hours * 60));
+              document.getElementById("totar").innerHTML = 
+              parseInt(day) + '일' + parseInt(hours) + '시간' + parseInt(minutes) + '분';  
+          }
+        });
+
+
+
+         /* var inputValue = $("input[name=time]").length; // 배열의 갯수를 13개로 지정
+          var inValue = new Array(inputValue); // 인풋박스안에 숫자를 넣으면 그숫자는 배열이 된다
+            for(var i=0; i<inputValue; i++){
+              inValue[i] = $("input[name=time]").eq(i).val()
+              var m=inValue[i];
+              console.log(m)
+              };
+              console.log(m);
+            function tt(){
+              console.log(m)
+              var day = Math.floor(m / 1440);
+              var hours = Math.floor((m - (day * 1440)) / 60);
+              var minutes = (m - (day * 1440) - (hours * 60));
+              document.getElementById("totar").innerHTML = 
+              parseInt(day) + '일' + parseInt(hours) + '시간' + parseInt(minutes) + '분';
+          }
+          tt();
+            console.log(inValue)*/
+        //function inValue(){ 
+          //     // 1분 인풋
+          //     var tP = $("#time_1m").val();
+          //     var day = Math.floor(tP / 1440);
+          //     var hours = Math.floor((tP - (day * 1440)) / 60);
+          //     var minutes = parseInt(tP - (day * 1440) - (hours * 60));
+    </script>
+    <!-- 2. 아래 코드들과 이기능들을 조금 더 업그레이드 해볼까요? -->
+    <!-- 2-1. 위에서 저장한 inValue값은 어디에서 사용되는걸까요?? inValue값을 사용해서 출력해보기!! - for문 사용 = 아래 코드들을 줄일 수 있어요! -->
+    <!-- 2-2. 계산하기 버튼을 클릭하면 버튼이 사라지죠?? 조금더 업그레이드 해볼까요? 계산한 후 값을 "변경"하면 계산하기 버튼이 다시 나타나도록 해보기! -->
   </body>
 </html>
