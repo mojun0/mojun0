@@ -6,7 +6,7 @@
     <title>준영이의 라오킹</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="../Jquery/jquery-3.5.1.js"></script>
-    <!-- <script src="../js/timeclu.js"></script> -->
+    <script src="../js/timeclu.js"></script>
     <script src="../js/clickval.js"></script>
   </head>
   <body>
@@ -40,7 +40,7 @@
             <td>60분</td>
             <td>3시간</td>
             <td>8시간</td>
-            <td>12시간</td>
+            <td>15시간</td>
             <td>24시간</td>
             <td>3일</td>
             <td>7일</td>
@@ -76,73 +76,6 @@
       </div>
     </div>
     <script>
-      $(document).ready(function(){
-        // console.log('Calculation start'); // 스크립트 연결 확인
-        $("#cal_btn").click(function(){
-          $("#cal_btn").hide();
-            var inputValue = $("input[name=time]").length;
-            var inValue = new Array();
-             for(var i=0; i< inputValue; i++){
-              inValue[i] = $("input[name=time]").eq(i).val();
-             }
-             for(var j=0; j<inValue.length; j++){
-               switch(j){ //j가...
-                  case 0: // 0이면 아래 문구들을 실행
-                    var one = inValue[j];
-                    console.log('1분값'+one);
-                    break; // case 빠져나감
-                  case 1:
-                    var five = inValue[j];
-                    console.log('5분값'+five);
-                    break;                
-                    //이어서 하실 수 있으시죠?
-                    //이건 if문으로도 가능해요!
-               }
-             }
-             console.log('for문밖'+one);
-             console.log('for문밖'+five);
-             var sum = one+five;
-
-             console.log('합계'+sum); // Q. 여기서 문제는 뭘까요?? 해결보세요!
-            //  tt();
-      })
-          //   function tt(){
-          //     var m = inValue[0]; // 이값을 도저히 인벨류값을 못뺴오겠어요 .. 
-          //     console.log(m)
-          //     var day = Math.floor(m / 1440);
-          //     var hours = Math.floor((m - (day * 1440)) / 60);
-          //     var minutes = (m - (day * 1440) - (hours * 60));
-          //     document.getElementById("totar").innerHTML = 
-          //     parseInt(day) + '일' + parseInt(hours) + '시간' + parseInt(minutes) + '분';  
-          // }
-        });
-
-
-
-         /* var inputValue = $("input[name=time]").length; // 배열의 갯수를 13개로 지정
-          var inValue = new Array(inputValue); // 인풋박스안에 숫자를 넣으면 그숫자는 배열이 된다
-            for(var i=0; i<inputValue; i++){
-              inValue[i] = $("input[name=time]").eq(i).val()
-              var m=inValue[i];
-              console.log(m)
-              };
-              console.log(m);
-            function tt(){
-              console.log(m)
-              var day = Math.floor(m / 1440);
-              var hours = Math.floor((m - (day * 1440)) / 60);
-              var minutes = (m - (day * 1440) - (hours * 60));
-              document.getElementById("totar").innerHTML = 
-              parseInt(day) + '일' + parseInt(hours) + '시간' + parseInt(minutes) + '분';
-          }
-          tt();
-            console.log(inValue)*/
-        //function inValue(){ 
-          //     // 1분 인풋
-          //     var tP = $("#time_1m").val();
-          //     var day = Math.floor(tP / 1440);
-          //     var hours = Math.floor((tP - (day * 1440)) / 60);
-          //     var minutes = parseInt(tP - (day * 1440) - (hours * 60));
     </script>
     <!-- 2. 아래 코드들과 이기능들을 조금 더 업그레이드 해볼까요? -->
     <!-- 2-1. 위에서 저장한 inValue값은 어디에서 사용되는걸까요?? inValue값을 사용해서 출력해보기!! - for문 사용 = 아래 코드들을 줄일 수 있어요! -->
