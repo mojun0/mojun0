@@ -22,16 +22,15 @@
             <a href="IX.html"class="saw" id="active"><li>경험치</li></a>
           </ul>
         </div>
-      </div>   <!--여기다가 배경 애드워드 사진 배경으로 넣기-->
+      </div> 
       <div class="main">
         <div>
-          <!-- <h1 style="color:gold; font-size: 25px; text-align:center;">가속계산기</h1> -->
           <!-- 1: table 부분에서 잘못된점 찾기!! 2가지 -->
           <table border="1" bordercolor="gold" width="100%" height="150" padding-top="calc(300 / 1300 * 100%);">
             <caption style="color:gold; font-size: 25px;">
               <strong>가속계산기</strong>
             </caption> 
-            <th></th>        
+            <td></td>        
             <td>1분</td>
             <td>5분</td>
             <td>10분</td>
@@ -46,7 +45,7 @@
             <td>7일</td>
             <td>30일</td>
             <tr>
-              <th>갯수</th>
+              <td>갯수</td>
               <td><input type="text" size="2px" name="time" id="time_1m" value="0"></td>
               <td><input type="text" size="2px" name="time" id="time_5m" value="0"></td>
               <td><input type="text" size="2px" name="time" id="time_10m" value="0"></td>
@@ -62,12 +61,10 @@
               <td><input type="text" size="2px" name="time" id="time_30d" value="0"></td>
             </tr>
             <tr>
-              <th>합계</th>
+              <td>합계</td>
               <div id="buttonposition">
                 <td colspan="13" id="totar">
-                  <button id="cal_btn">계산하기</button>
-                  <!-- 2. 초기화 버튼이 안나타나는것 같죠?? -->
-                  <button id="reset" style="position: fixed; right:50px;">초기화</button>
+                 <button id="cal_btn">계산하기</button>
               </div>
               </td>
             </tr>
